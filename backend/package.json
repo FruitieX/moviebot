@@ -1,6 +1,22 @@
 {
-  "name": "backend",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+   "name": "backend",
+   "version": "1.0.0",
+   "main": "index.js",
+   "license": "MIT",
+   "scripts": {
+      "start": "ts-node src/index.ts"
+   },
+   "devDependencies": {
+      "@types/koa": "^2.0.46",
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "ts-node-dev": "^1.0.0-pre.30",
+      "typescript": "2.5.2"
+   },
+   "dependencies": {
+      "koa": "^2.6.2",
+      "pg": "^7.3.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.8"
+   }
 }
