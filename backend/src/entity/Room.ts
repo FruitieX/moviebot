@@ -1,10 +1,10 @@
 import { Entity, PrimaryColumn, Column, BaseEntity } from 'typeorm';
 
 @Entity()
-export class User extends BaseEntity {
+export class Room extends BaseEntity {
   @PrimaryColumn()
-  id: string;
+  uuid: string;
 
-  @Column()
-  email: string;
+  @PrimaryColumn()
+  movieId: string;
 }

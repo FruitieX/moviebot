@@ -14,8 +14,10 @@
       "typescript": "2.5.2"
    },
    "dependencies": {
+      "@types/koa-router": "^7.0.34",
       "dotenv": "^6.1.0",
       "koa": "^2.6.2",
+      "koa-router": "^7.4.0",
       "pg": "^7.3.0",
       "reflect-metadata": "^0.1.10",
       "superagent": "^4.0.0-beta.5",
