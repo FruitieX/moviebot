@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Kychis Awesome Movie Voter',
   },
   plugins: [
     'gatsby-plugin-typescript',
