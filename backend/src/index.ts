@@ -3,9 +3,11 @@ import * as Koa from 'koa';
 import { createConnection } from 'typeorm';
 import { User } from './entity/User';
 import { router } from './routes';
+import * as koaBody from 'koa-body';
 
 const app = new Koa();
 
+app.use(koaBody());
 app.use(router.routes()).use(router.allowedMethods());
 
 createConnection()
