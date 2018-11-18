@@ -13,6 +13,7 @@ export const searchMovie = decodeRequest(ReqType)(async (ctx, next) => {
   try {
     ctx.body = { results: await omdb.search(ctx.decoded.query.filter) };
   } catch(e) {
+    ctx.status = 500;
     ctx.body = { error: e.message };
   }
 });

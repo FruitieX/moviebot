@@ -13,6 +13,7 @@ export const getMovie = decodeRequest(ReqType)(async (ctx, next) => {
   try {
     ctx.body = { result: await omdb.get(ctx.decoded.params.movieId) };
   } catch(e) {
+    ctx.status = 500;
     ctx.body = { error: e.message };
   }
 });
