@@ -13,6 +13,7 @@ const omdb = axios.create({
 })
 
 export const search = async (query: string) => {
+  // TODO: io-ts validations
   const response = await omdb.get('/', {
     params: {
       t: query,
