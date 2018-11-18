@@ -10,6 +10,9 @@ const ReqType = t.type({
 });
 
 export const searchMovie = decodeRequest(ReqType)(async (ctx, next) => {
-  const result = await omdb.search(ctx.decoded.query.filter);
-  ctx.body = { result };
+  try {
+    ctx.body = { results: await omdb.search(ctx.decoded.query.filter) };
+  } catch(e) {
+    ctx.body = { error: e.message };
+  }
 });
