@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { SearchField } from './SearchField';
 import { Button } from './Button';
+import { MovieList } from './MovieList';
 
 export class SearchMovie extends React.Component {
   state = {
     searchMovie: '',
-    resultMovies: [''],
+    resultMovies: ['kakka'],
   };
 
   handleChange = (value: string) => {
@@ -13,7 +14,9 @@ export class SearchMovie extends React.Component {
   };
   handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert(this.state.searchMovie);
+    this.setState({
+      resultMovies: [...this.state.resultMovies, this.state.searchMovie],
+    });
   };
 
   render() {
@@ -24,6 +27,7 @@ export class SearchMovie extends React.Component {
           value={this.state.searchMovie}
         />
         <Button name="search" />
+        <MovieList movieList={this.state.resultMovies} />
       </form>
     );
   }

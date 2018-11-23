@@ -11,10 +11,6 @@ export class Button extends React.Component<Props> {
   };
 
   render() {
-    return (
-      <div>
-        <button onClick={this.props.onClick}>{this.props.name}</button>
-      </div>
-    );
+    return <button onClick={this.props.onClick}>{this.props.name}</button>;
   }
 }
