@@ -8,6 +8,6 @@ export class MovieList extends React.Component<Props> {
     let movies = this.props.movieList.map(movie => {
       <div>movie</div>;
     });
-    return <ul>{movies}</ul>;
+    return movies;
   }
 }

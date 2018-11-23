@@ -25,7 +25,7 @@ export class SearchMovie extends React.Component {
           value={this.state.searchMovie}
         />
         <Button name="search" />
-        <MovieList movieList= {this.state.resultMovies} />
+        <MovieList movieList={this.state.resultMovies} />
       </form>
     );
   }
