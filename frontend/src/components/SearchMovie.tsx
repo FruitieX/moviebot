@@ -6,7 +6,7 @@ import { MovieList } from './MovieList';
 export class SearchMovie extends React.Component {
   state = {
     searchMovie: '',
-    resultMovies: [''],
+    resultMovies: ['kakka'],
   };
 
   handleChange = (value: string) => {
@@ -14,7 +14,9 @@ export class SearchMovie extends React.Component {
   };
   handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    this.setState({ resultMovies: [this.state.searchMovie] });
+    this.setState({
+      resultMovies: [...this.state.resultMovies, this.state.searchMovie],
+    });
   };
 
   render() {

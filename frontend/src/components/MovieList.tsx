@@ -5,9 +5,8 @@ interface Props {
 
 export class MovieList extends React.Component<Props> {
   render() {
-    let movies = this.props.movieList.map(movie => {
-      <div>movie</div>;
-    });
-    return movies;
+    console.log(this.props.movieList);
+    let movies = this.props.movieList.map(movie => <div>{movie}</div>);
+    return <div>{movies}</div>;
   }
 }
