@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Movie } from '../types/Movie';
+import { SearchResults } from '../types/Movie';
 import { formatValidationErrors } from '../utils/formatValidationErrors';
 const BASE_URL = 'http://localhost:3000';
 
@@ -13,10 +13,10 @@ export const searchMovie = async (MovieName: string) => {
       filter: MovieName,
     },
   });
-  return Movie.decode(response.data).fold(
+  return SearchResults.decode(response.data).fold(
     errors => {
       throw new Error(formatValidationErrors(errors));
     },
-    data => data,
+    data => data.results,
   );
 };

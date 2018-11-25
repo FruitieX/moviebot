@@ -30,4 +30,6 @@ export const SearchResult = t.type({
   imdbID: t.string,
 });
 
-export const SearchResults = t.array(SearchResult);
+export const SearchResults = t.type({
+  results: t.array(SearchResult),
+});
