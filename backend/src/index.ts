@@ -4,9 +4,11 @@ import { createConnection } from 'typeorm';
 import { User } from './entity/User';
 import { router } from './routes';
 import * as koaBody from 'koa-body';
+import * as koaCors from '@koa/cors';
 
 const app = new Koa();
 
+app.use(koaCors());
 app.use(koaBody());
 app.use(router.routes()).use(router.allowedMethods());
 
