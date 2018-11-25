@@ -2,20 +2,22 @@ import * as React from 'react';
 import { SearchField } from './SearchField';
 import { Button } from './Button';
 import { MovieList } from './MovieList';
+import { searchMovie } from '../services/api';
 
 export class SearchMovie extends React.Component {
   state = {
     searchMovie: '',
-    resultMovies: ['kakka'],
+    resultMovies: [],
   };
 
   handleChange = (value: string) => {
     this.setState({ searchMovie: value });
   };
-  handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+  handleSearch = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const movies = await searchMovie(this.state.searchMovie);
     this.setState({
-      resultMovies: [...this.state.resultMovies, this.state.searchMovie],
+      resultMovies: movies,
     });
   };
 
