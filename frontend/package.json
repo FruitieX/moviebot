@@ -5,6 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "axios": "^0.18.0",
+    "fp-ts": "^1.11.2",
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
     "gatsby-plugin-manifest": "^2.0.5",
@@ -15,6 +16,7 @@
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
     "io-ts": "^1.4.2",
+    "io-ts-reporters": "^0.0.21",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0"
